@@ -1,0 +1,21 @@
+planner:
+  model_name: Qwen2-VL-7B-Instruct
+  base_url: "http://127.0.0.1:30000/v1"
+  api_key: "none"
+  random_seed: 0
+  max_steps: 25
+  use_predefined_prompt: False
+  icl: True
+  sft: False
+
+name: alfred_${planner.model_name}
+
+out_dir: outputs/${name}/${now:%Y%m%d_%H%M%S}
+
+alfred:
+  x_display: '1'
+  eval_set: 'valid_unseen'
+  eval_portion_in_percent: 5
+  random_seed_for_eval_subset: 1
+  eval_start_index: 0
+  eval_end_index: -1

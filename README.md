@@ -86,10 +86,27 @@ Notes:
 - `eval_start_index` & `eval_end_index`: control the evaluation data range.
 
 
+
+## 🌲 Data Exploration
+
+1. First, set the `api_key` and `base_url` in `./src/task_planner.py` (lines 17–19). You can specify different models for different modules as needed.
+
+2. Run the `scripts/run_{task_type}.sh` script to generate data in parallel using multiple GPUs. This script launches multiple processes to execute src/evaluate3.py, which collects data through a tree search mechanism.
+You can control task parallelism and index assignment within the shell script using the following parameters:
+
+  - `BASE_START_INDEX=`: starting index
+  - `NODE_INCREMENT=50`: increment per node
+  - `INCREMENT=10`: number of tasks per process
+  - `NUM_TASKS=5`: number of parallel processes to launch
+
+3. Process the generated data as required.
+
+
+
 ## 📝 TODO
 
 - [x] Open source evaluation data and scripts (See section: 📊 Benchmarking on VoTA-Bench)
-- [ ] Release data collection scripts and training data
+- [x] Release data collection scripts and training data
 
 ## 👋 Citation
 

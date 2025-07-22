@@ -10,11 +10,12 @@ Recent advances in large vision-language models (LVLMs) have shown promise for e
 
 ---
 
-# 🎉 News
-[2025-05-16] Our paper is accepted by ACL 2025 (main)! 
+## 🎉 News
+[2025-05-16] Our paper is accepted by ACL 2025 (main)!   
+
 [2025-03-26] Our paper is accepted by [ICLR 2025 Workshop on World Models](https://sites.google.com/view/worldmodel-iclr2025/)!
 
-# 🤗 D2PO Dataset
+## 🤗 D2PO Dataset
 
 The **D2PO** dataset contains various data splits for alignment training, including supervised fine-tuning and direct preference optimization.
 

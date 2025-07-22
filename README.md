@@ -1,7 +1,7 @@
 # *World Modeling Makes a Better Planner:* Dual Preference Optimization for Embodied Task Planning
 
 
-  [**📖 arXiv**](https://arxiv.org/abs/2503.10480) | [**🤗 Paper**](https://huggingface.co/papers/2503.10480) | [**GitHub**](https://github.com/sinwang20/D2PO) | [**📣 Twitter/X**](https://x.com/wang_siyin/status/1900427845652160659) 
+  [**📖 arXiv**](https://arxiv.org/abs/2503.10480) | [**🤗 Paper**](https://huggingface.co/papers/2503.10480) | [**🤗 Dataset**](https://huggingface.co/datasets/sinwang/D2PO) | [**GitHub**](https://github.com/sinwang20/D2PO) | [**📣 Twitter/X**](https://x.com/wang_siyin/status/1900427845652160659) 
 
 This repository contains the code and data for our paper: [World Modeling Makes a Better Planner: Dual Preference Optimization for Embodied Task Planning](https://arxiv.org/abs/2503.10480).
 
@@ -9,6 +9,22 @@ This repository contains the code and data for our paper: [World Modeling Makes 
 Recent advances in large vision-language models (LVLMs) have shown promise for embodied task planning, yet they struggle with fundamental challenges like dependency constraints and efficiency. Existing approaches either solely optimize action selection or leverage world models during inference, overlooking the benefits of learning to model the world as a way to enhance planning capabilities. We propose **Dual Preference Optimization (D²PO)**, a new learning framework that jointly optimizes state prediction and action selection through preference learning, enabling LVLMs to understand environment dynamics for better planning. To automatically collect trajectories and stepwise preference data without human annotation, we introduce a tree search mechanism for extensive exploration via trial-and-error. Extensive experiments on VoTa-Bench demonstrate that our D^2PO-based method significantly outperforms existing methods and GPT-4o when applied to Qwen2-VL (7B), LLaVA-1.6 (7B), and LLaMA-3.2 (11B), achieving superior task success rates with more efficient execution paths.
 
 ---
+
+# 🎉 News
+[2025-05-16] Our paper is accepted by ACL 2025 (main)! 
+[2025-03-26] Our paper is accepted by [ICLR 2025 Workshop on World Models](https://sites.google.com/view/worldmodel-iclr2025/)!
+
+# 🤗 D2PO Dataset
+
+The **D2PO** dataset contains various data splits for alignment training, including supervised fine-tuning and direct preference optimization.
+
+| Split Name   | Description                               | Size       | 
+|--------------|-------------------------------------------|--------------|
+| [🤗 SFT_Policy](https://huggingface.co/datasets/sinwang/D2PO/blob/main/sft-data-600-images+.json) | SFT data for action selection             | 4.5k | 
+| [🤗 DPO_Policy](https://huggingface.co/datasets/sinwang/D2PO/blob/main/dpo-data-600-images+.json) | DPO data for action selection  | 15k        |
+| [🤗 DPO_World](https://huggingface.co/datasets/sinwang/D2PO/blob/main/dpo-data-600-world+.json)  | DPO data for state prediction     | 8.7k        | 
+
+
 
 ## 🚀 Install
 
